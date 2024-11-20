@@ -11,6 +11,10 @@
 - api swagger docs
 - docker support
 
+## Design note:
+
+File category was added as a separate database field and gets populated on save (by guessing the type) in order to avoid making more expensive queries (direct field search vs __endswith)
+
 ## How to run
 
 simply `docker-compose up --build`
